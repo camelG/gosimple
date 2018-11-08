@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>{% block title %}{% endblock %}｜MyHomePage</title>
+    <link href="/css/icon.css?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    {% block css %}{% endblock %}
+    {% block head %}{% endblock %}
+</head>
+<body>
+{% block header %}{% endblock %}
+
+{% block modal %}{% endblock %}
+
+{% block main %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+<script src="/js/materialize.min.js"></script>
+<script src="/js/sweetalert.min.js"></script>
+{# dev #}
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{# product #}
+{# <script src="https://cdn.jsdelivr.net/npm/vue"></script> #}
+
+{% if alert %}
+<script>
+	swal( {{ alert|raw }} );
+</script>
+{% endif %}
+{% block js %}{% endblock %}
+</body>
+</html>
