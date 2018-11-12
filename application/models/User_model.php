@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Status_model extends CI_Model
+class User_model extends CI_Model
 {
     private $table = 'user';
 
